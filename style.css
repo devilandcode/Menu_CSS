@@ -1,0 +1,142 @@
+.itemImg__img, .itemImg__link, .menuToggle{
+
+    display: block;
+}
+
+
+/* Open and Close menu  */
+.btn {
+    width: 140px;
+    background: red;
+    color: #fff;
+    padding: 3px;
+    display: block;
+    border: 2px solid red;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.menu {
+    display: none;
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    display: block;
+    width: 200px;
+    background: rgb(123, 123, 162);
+    border: 2px solid rgb(123, 123, 162);
+    margin-top: 10px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    height: 48px;
+    line-height: 48px;
+}
+
+.menu li {
+    height: 52px;
+}
+
+.menuToggle {
+    display: none;
+}
+
+.menuToggle:checked ~ .menu {
+    display: block;
+}
+.menuToggle:checked ~ .itemImg {
+    visibility: hidden;
+}
+.menuToggle:checked ~ .btn {
+    background: green;
+    border: 2px solid green;
+}
+
+.menuLink::after, .menuLink::before {
+    content: '';
+    display: inline-block;
+    width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+}
+
+.menuLink::after {
+    border-left: 20px solid #fff;
+    margin-left: 10px;
+ 
+}
+
+.menuLink::before {
+    border-right: 20px solid #fff;
+    margin-right: 10px;
+}
+
+.menuLi:hover .menuLink::before, .menuLi:hover .menuLink::after {
+    visibility: visible;
+    rotate: 180deg;
+    transition: rotate 0.5s;
+}
+
+
+/* All actions from the top - from the menu */
+.itemImg {
+    display: inline-block;
+}
+
+.itemImg {
+    width: 320px;
+    background: rgb(123, 123, 162);
+}
+
+.itemImg__img {
+    width: 300px;  
+}
+
+.itemImg__img {
+    padding:10px;
+}
+
+.itemImg__link {
+    text-align: center;
+    text-decoration: none;
+    font-size: 28px;
+    color: #fff;
+    padding-bottom: 14px;
+    height: 28px;
+}
+
+.itemImg__link::after, .itemImg__link::before {
+    content: '';
+    display: inline-block;
+    width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+    visibility: hidden;
+}
+
+.itemImg__link::after {
+    border-left: 20px solid #fff;
+    margin-left: 20px;
+}
+
+.itemImg__link::before {
+    border-right: 20px solid #fff;
+    margin-right: 20px; 
+}
+
+.itemImg:hover .itemImg__link::before, .itemImg:hover .itemImg__link::after {
+    visibility: visible;
+}
+
+.itemImg__link:hover.itemImg__link::before, .itemImg__link:hover.itemImg__link::after {
+    visibility: visible;
+    rotate: 180deg;
+    transition: rotate 0.5s;
+}
